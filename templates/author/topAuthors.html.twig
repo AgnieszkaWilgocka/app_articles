@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+{{ 'author' }}
+{% endblock %}
+
+{% block body %}
+<h1> {{'Top 3 authors' }} </h1>
+<p>{{ 'Top three authors' }}</p>
+{% for item in authors %}
+<p>{{ item[0].name}}</p>
+<p>{{ 'Articles amount: ' }} {{ item['articlesTotal'] }} </p>
+{% endfor %}
+{% endblock %}

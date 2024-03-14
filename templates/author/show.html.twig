@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+{{ 'author_show' }}
+{% endblock %}
+
+{% block body %}
+
+<p>{{ 'Author name: '}}</p>
+<p>{{ author.name }}</p>
+
+<p> {{ 'Articles:' }} </p>
+
+{% for article in author.articles %}
+<p> {{ article.title}} </p>
+{% endfor %}
+
+{% endblock %}
